@@ -1,3 +1,5 @@
+//HELP: Module isn't working. For some reason the submit button won't show the friendfinder result.
+
 //Dependencies
 
 var express = require("express");

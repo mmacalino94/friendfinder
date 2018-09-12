@@ -1,5 +1,5 @@
 var path = require("path");
-var friends = require("../app/data/friends.js");
+var friends = require("../app/data/friends");
 
 module.exports = function(app) {
   app.get("/api/friends", function(req, res) {
@@ -16,7 +16,7 @@ app.post("/api/friends", function(req, res) {
  
     var newFriend = req.body;
     var newFriendResponses = newFriend.scores;
-    var totdiff;//
+    var totdiff;
 
 
 for (var i = 0; i < friends.length; i++) {
@@ -30,14 +30,14 @@ totdiff=0;
   }
 
   if (totdiff <= bestfriend.friendDifference) {
-    bestfriend .name = currentfrnd.name;
-    bestfriend .photo = currentUserScore.photo;
-    bestfriend .friendDifference = totdiff;
+    bestfriend.name = currentfrnd.name;
+    bestfriend.photo = currentUserScore.photo;
+    bestfriend.friendDifference = totdiff;
   }
 }
 
 friends.push(newFriend);
 
-res.json(bestfriend );
+res.json(bestfriend);
   });
 }
