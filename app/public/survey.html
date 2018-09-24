@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <br>
+    <div id="surveybody">
+        
+        <div class="row">
+            <div class="col-md-11">
+                <div id="header">
+                    <h1>Friend Finder Survey</h1>
+                    <p>You're just one more step away from finding your new friend!</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Basic Info:</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <label for="name">What is your name?</label>
+                                <br>
+                                <input type="text" id="nameloc">
+                                <br>
+                                <label for="pic">Please upload a picture of yourself.</label>
+                                <br>
+                                <input type="text" id="picloc">
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <br>
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="card">
+                            <div class="card-header">
+                                <h3>Questions:</h3>
+                                <p>For the questions below, please answer on a scale of 1-5, with 5 being "Highly Agree" and 1 being Highly Disagree."</p>
+                            </div>
+    
+                        <div class="card-body">
+                            <form>
+                                <label for="Q1">I'm looking for a serious relationship.</label>
+                                <br>
+                                <input type="number" id="Q1loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q2">I'm an introverted person'.</label>
+                                <br>
+                                <input type="number" id="Q2loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q3">I want children in the future.</label>
+                                <br>
+                                <input type="number" id="Q3loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q4">I don't mind having pets in the family.</label>
+                                <br>
+                                <input type="number" id="Q4loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q5">I am adventurous and love trying new things.</label>
+                                <br>
+                                <input type="number" id="Q5loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q6">I enjoy playing videogames.</label>
+                                <br>
+                                <input type="number" id="Q6loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q7">I enjoy watching anime and reading manga.</label>
+                                <br>
+                                <input type="number" id="Q7loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q8">I am opinionated.</label>
+                                <br>
+                                <input type="number" id="Q8loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q9">I value family and community first.</label>
+                                <br>
+                                <input type="number" id="Q9loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <label for="Q10">I am sympathetic.</label>
+                                <br>
+                                <input type="number" id="Q10loc" placeholder="1-5" min="1" max="5">
+                                <br>
+                                <br>
+                                <button type="button" class="btn btn-info" id="submitbttnloc" data-toggle="modal" data-target="#myModal" value="Submit">
+                                        Submit
+                                    </button>
+                            </form> 
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <br>
+        </div>
+       
+        <!-- Modal (appears with match after form is submitted) -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Your new best friend!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Links to other pages -->
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 apilink">
+                <a href="../data/friends.js">API Friends List</a>
+                | 
+                <a href="https://github.com/mmacalino94/friendfinder.git" >GitHub Repo</a>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+</body>
+</html>
